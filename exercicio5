@@ -1,0 +1,35 @@
+class ContaCorrente:
+    def __init__(self,numeroDaConta,nomeDoCorrentista,saldo):
+        self.numeroDaConta = numeroDaConta
+        self.nomeDoCorrentista = nomeDoCorrentista
+        self.saldo = saldo
+
+    def alterarNome(self,alterandoNome):
+        self.alterandoNome = alterandoNome
+        print(f"Nome mudado de {self.nomeDoCorrentista} para {self.alterandoNome}")
+
+    def deposito(self,deposito):
+        self.deposito = deposito
+        self.saldo = self.deposito + self.saldo
+        print(f"A Quantia com o deposito fica R$ {self.saldo} Reais")
+
+    def sacar(self,saque):
+        self.saque = saque
+        if self.saque < self.saldo:
+            self.saldo = self.saldo - self.saque
+            print(f"A Quantia com o saque fica R$ {self.saldo} Reais")
+        else:
+            raise Exception("Impossivel realizar o Saque")
+
+
+
+conta1 = ContaCorrente(123,"asaph",300)
+print(conta1.nomeDoCorrentista)
+conta1.alterarNome("ricardo")
+print(conta1.alterandoNome)
+
+
+print(conta1.saldo)
+conta1.deposito(100)
+print(conta1.saldo)
+conta1.sacar(10)
