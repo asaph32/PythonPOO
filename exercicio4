@@ -1,0 +1,46 @@
+class Pessoa:
+    def __init__(self,nome,idade,peso,altura):
+        self.nome = nome
+        self.idade = idade
+        self.peso = peso
+        self.altura = altura
+
+    def envelhecer(self):
+        self.idade -= 1
+        print(f"idade agora é de {self.idade}")
+
+
+    def engordar(self):
+        self.peso += 1
+        print(f"Agora que ele engordou o peso dele agora é de {self.peso}")
+        pass
+
+    def emagrecer(self):
+        self.peso -= 1
+        print(f"Agora que ele emagreceu o peso dele é de {self.peso}")
+        pass
+
+    def crescer(self):
+        if self.idade < 21:
+            novaAltura = self.altura * 0.5
+            print(f"cresceu {novaAltura} m ")
+        else:
+            print(f"Altura continua de {self.altura}")
+
+pessoa1 = Pessoa("Asaph",20,70,1.70)
+print(pessoa1.idade)
+pessoa1.envelhecer()
+print(pessoa1.idade)
+
+print("---------")
+
+print(pessoa1.peso)
+pessoa1.engordar()
+print(pessoa1.peso)
+pessoa1.emagrecer()
+
+print("-----------")
+
+print(pessoa1.altura)
+pessoa1.crescer()
+print(pessoa1.altura)
