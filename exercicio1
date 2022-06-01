@@ -1,0 +1,17 @@
+class bola:
+    def __init__(self,cor,circunferencia,material):
+        self.cor = cor
+        self.circunferencia = circunferencia
+        self.material = material
+
+    def trocarCor(self,trocandoCor):
+        self.trocandoCor = trocandoCor
+
+    def mostrarCor(self):
+        print(f"A cor era {self.cor} agr é {self.trocandoCor}")
+
+
+
+bola1 = bola("azul",25,"couro")
+bola1.trocarCor("amarelo")
+bola1.mostrarCor()
