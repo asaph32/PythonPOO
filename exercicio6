@@ -1,0 +1,42 @@
+class BichinhoVirtual:
+    def __init__(self,nome,fome,saude,idade):
+        self.nome = nome
+        self.fome = fome
+        self.saude = saude
+        self.idade = idade
+
+    def alterarNome(self,novoNome):
+        self.novoNome = novoNome
+        print(f"Nome trocado de {self.nome} para {self.novoNome}")
+
+
+    def fomer(self,comer):
+        self.comer = comer
+        if self.comer == "sim":
+            print(f"alimentando {self.novoNome} ")
+        else:
+            print(f"Nao estou alimentando {self.novoNome}")
+        pass
+
+    def saude(self):
+        if self.saude <= 10:
+            print(f"{self.novoNome} esta doente")
+        elif self.saude <= 20:
+            print(f"{self.novoNome} esta fraco")
+        elif self.saude <= 30:
+            print(f"{self.novoNome} esta instavel")
+        elif self.saude <= 40:
+            print(f"{self.novoNome} vida menos da metade...Atençao!!")
+        elif self.saude <= 50:
+            print(f"vida mais da metade do {self.novoNome}")
+
+    def idade(self):
+        self.idade += 1
+
+
+
+tamagushi = BichinhoVirtual("Tamagushi","sim",20,10)
+print(tamagushi.nome)
+tamagushi.alterarNome("pikachu")
+print(tamagushi.novoNome)
+tamagushi.fomer("sim")
