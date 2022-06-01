@@ -1,0 +1,47 @@
+lass Retangulo:
+    def __init__(self,ladoA,ladoB):
+        self.ladoA = ladoA
+        self.ladoB = ladoB
+
+    def mudarValorDosLados(self,novoValorDoLadoA,novoValorDoLadoB):
+        self.novoValorDoLadoA = novoValorDoLadoA
+        self.novoValorDoLadoB = novoValorDoLadoB
+
+
+    def retornarValorDosLados(self):
+        print(f"Valor do A era {self.ladoA} Cm Agora ele vale : {self.novoValorDoLadoA} Cm")
+        print(f"O Valor do B era {self.ladoB} Cm Agora vale : {self.novoValorDoLadoB}")
+
+    def calcularArea(self):
+        calcularAreaDoRetangulo = self.novoValorDoLadoA * self.novoValorDoLadoB
+        print(f"A Area do Retangulo é {calcularAreaDoRetangulo}")
+
+
+    def calcularPerimetro(self):
+        calcularPerimetroDoRetangulo = 2 * (self.novoValorDoLadoA + self.novoValorDoLadoB)
+        print(f"O Perimetro do Retangulo vale : {calcularPerimetroDoRetangulo}")
+
+retangulo = Retangulo(10,15)
+retangulo.mudarValorDosLados(20,25)
+retangulo.retornarValorDosLados()
+retangulo.calcularArea()
+retangulo.calcularPerimetro()
+
+
+
+print("\n ------------------------------------------------------------")
+
+
+
+
+
+class calculoDePisos:
+    def __init__(self,altura,largura):
+        self.altura = altura
+        self.largura = largura
+        calcularMedidas = self.largura * self.altura
+        print(f"A medida é de {calcularMedidas}")
+        qntdPisos = calcularMedidas / 2
+        print(f"A quantidade de pisos é de {qntdPisos}")
+
+calcular = calculoDePisos(10,10)
