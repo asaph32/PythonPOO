@@ -1,0 +1,22 @@
+class Quadrado:
+    def __init__(self,TamanhoDoLado):
+        self.TamanhoDoLado = TamanhoDoLado
+
+    def mudarValorDolado(self,mudarValorDoLado):
+        self.mudarValorDolado = mudarValorDoLado
+
+
+
+    def retornarValorDoLado(self):
+        print(f"O lado era de {self.TamanhoDoLado} Cm agora é de {self.mudarValorDolado} Cm")
+
+
+
+    def calcularArea(self):
+        calcularLadoDoQuadrado = self.mudarValorDolado * self.mudarValorDolado
+        print(f"O quadrado vale : {calcularLadoDoQuadrado}")
+
+quadrado = Quadrado(10)
+quadrado.mudarValorDolado(15)
+quadrado.retornarValorDoLado()
+quadrado.calcularArea()
